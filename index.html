@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Auto Color Change</title>
+
+
+	<style>
+		body{
+			/*background: red;*/
+			transition: 1s;
+		}
+	</style>
+</head>
+<body id="my_body">
+	
+
+
+
+
+	<!-- jquery cdn -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			// code start
+            
+			var colors = [
+				'red',
+				'green',
+				'blue',
+				'black',
+				'pink',
+				'#ae8510'
+			];
+
+
+			var i = 0;
+			function change_color(){
+
+				$("#my_body").css('background',colors[i]);
+
+				i++;
+
+				if(i> (colors.length-1)){
+					i = 0;
+				}
+			}
+
+			setInterval(change_color,1500);
+
+			// code end
+		})
+	</script>
+
+
+
+</body>
+</html>
